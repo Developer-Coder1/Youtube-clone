@@ -1,0 +1,266 @@
+body {
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: white;
+}
+
+header .navbar {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  line-height: 70px;
+  row-gap: 5px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  background-color: white;
+}
+
+.header-img {
+  width: auto;
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  cursor: text;
+  flex: 1;
+  display: flex;
+  font-size: 16px;
+  height: 34px;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.dropdown-menu {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 67px;
+  justify-content: flex-start;
+  background-color: white;
+  position: relative;
+  min-height: 500px;
+}
+
+.dropdown-menu.active {
+  width: 200px;
+}
+
+.fa-magnifying-glass {
+  font-size: 18px;
+  color: #0f0f0f;
+  cursor: pointer;
+  margin-left: -35px; /* tucks it inside the search bar */
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  width: 500px;
+  overflow: hidden;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.search-wrapper input {
+  border: none;
+  outline: none;
+  flex: 1;
+  height: 38px;
+  font-size: 16px;
+  padding: 0 16px;
+  margin: 0;
+}
+
+.fa-magnifying-glass {
+  font-size: 16px;
+  color: #606060;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  border-left: 1px solid #ccc;
+  padding: 10px 16px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+}
+
+.fa-magnifying-glass:active {
+  background-color: gray;
+  box-shadow: #0f0f0f;
+}
+
+.sidebar-item:hover {
+  background-color: #f2f2f2; /* light grey hover on whole item */
+  border-radius: 10px;
+}
+.fa-bell {
+  font-size: 22px;
+  color: #0f0f0f;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.sidebar-icon {
+  font-size: 22px;
+  color: #0f0f0f;
+  width: 30px;
+  text-align: center;
+}
+
+.sidebar-item:active {
+  background-color: rgb(205, 205, 205); /* light grey hover on whole item */
+  border-radius: 10px;
+}
+
+.sidebar-item {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+#menu-btn {
+  font-size: 22px;
+  color: #0f0f0f;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.sidebar-label {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.dropdown-menu.active .sidebar-label {
+  opacity: 1;
+}
+
+.videos {
+  flex: 1; /* takes up remaining space */
+  margin-left: 0;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));*/
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-left: 0;
+  margin-top: 70px;
+  padding: 16px;
+}
+
+.fa-microphone {
+  font-size: 34px;
+  color: black;
+  border-radius: 50%;
+  background-color: rgb(235, 231, 231);
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.videos img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* keeps proper video thumbnail ratio */
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.video-info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.channel-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* makes it a circle */
+  margin: 0;
+}
+
+.video-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.video-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+}
+
+.video-meta {
+  font-size: 12px;
+  color: gray;
+  margin: 0;
+}
+
+.video-link {
+  transition: transform 0.2s ease;
+  text-decoration: none; /* removes underline */
+  color: inherit; /* keeps text black instead of blue */
+}
+
+.video-link:hover {
+  transform: scale(1.05);
+}
