@@ -2,7 +2,7 @@
 
 A front-end clone of YouTube's homepage, built from scratch with HTML and CSS to practise layout fundamentals.
 
-**Live demo:** [youtube-coder1.netlify.app](https://youtube-coder1.netlify.app)
+**Live demo:** [youtube-clone-phi-eight-50.vercel.app](https://youtube-clone-phi-eight-50.vercel.app)
 
 ## What it does
 
